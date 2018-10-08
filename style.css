@@ -1,0 +1,108 @@
+body {
+  background-image:url( http://beloweb.ru/wp-content/uploads/2014/05/1234567100.jpg);
+  background-size:cover;
+  font-size: 16px;
+  font-family: Arial;
+  background-color: rgb(7, 207, 114);
+  padding: 20px;
+}
+.dogDiv {
+    position: fixed
+    width: 400px;
+    height: 400px;
+    background-image:url( http://beloweb.ru/wp-content/uploads/2014/05/1234567110.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5px 10px 5px 30px;
+    padding-right: 0px;
+    border: solid 1px black;
+    float: center;
+}
+.catDiv {
+   position: fixed
+    width: 400px;
+    height: 400px;
+    background-image:url( http://beloweb.ru/wp-content/uploads/2014/05/1234567102.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5px 10px 5px 30px;
+    padding-right: 0px;
+    border: solid 1px black;
+    float: center;
+}
+.dog {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: rgb(7, 207, 114);
+  box-shadow: 0 8px 15px rgba(233, 58, 58, 0.74);
+  transition: .3s;
+}
+.cat.active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+.cat {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: rgb(7, 207, 114);
+  box-shadow: 0 8px 15px rgba(233, 58, 58, 0.74);
+  transition: .3s;
+}
+.cat.active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+.groupZvery {
+  {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30,255,188,1);
+  background: rgba(255,255,255,1);
+  transition: color .3s, background .5s;
+}
+groupZvery:hover {
+  animation: stripes .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
+  background-size: 10px 10px;
+  color: #FF50E5;
+}
