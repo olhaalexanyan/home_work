@@ -1,7 +1,7 @@
 var zvery = ["...",
   "котик",
   "собачка",
-  "листик"
+  "звездочка"
 ]
 var catDiv = document.createElement("div")
     catDiv.className = "catDiv"
@@ -20,8 +20,16 @@ cat.onclick= function(){
         picture.id='picture'
         picture.src='http://persianpet.org/forum/images/imported/2012/09/28.aspx'
         catDiv.appendChild(picture)
+            picture.onclick = function(){
+              var catTextDiv = document.createElement("div")
+              catTextDiv.className = "catTextDiv"
+              catTextDiv.id = 'catTextDiv'
+              catTextDiv.innerText = "I love cat!!!"
+              catDiv.appendChild(catTextDiv)
+            }
     }
 }
+
 var dogDiv = document.createElement("div")
 dogDiv.className = "dogDiv"
 dogDiv.id = 'divDog'
@@ -39,12 +47,18 @@ dog.onclick= function(){
         picture2.id='picture'
         picture2.src='http://www.playcast.ru/uploads/2016/01/20/16899217.gif'
         dogDiv.appendChild(picture2)
+        picture.onclick = function(){
+          var dogTextDiv = document.createElement("div")
+          dogTextDiv.className = "dogTextDiv"
+          dogTextDiv.id = 'dogTextDiv'
+          dogTextDiv.innerText = "I Love dog!!!"
+          dogDiv.appendChild(dogTextDiv)
+        }
     }
 }
 
-
-
 var groupZvery = document.createElement ( 'select' )
+groupZvery.className = "groupZvery"
 document.body.appendChild ( groupZvery )
 for ( var zvery of zvery ) {
     var option = document.createElement ( 'option' )
@@ -65,41 +79,41 @@ groupZvery.onchange = function ( event ) {
     else if(event.target.selectedIndex === 3)
     {
       function Stars (){
-  this.elem = document.createElement("img")
-  document.body.appendChild(this.elem)
-  this.elem.src = "https://img-fotki.yandex.ru/get/6522/71746914.47/0_9c766_e4274eac_S.jpg"
-  this.elem.style = `
-  position:fixed;
-  display:block;
-  transition:all 0.5s;
-  width:200px;
-  `
-  this.move = function(){
-    var x = Math.random()*window.innerWidth
-    var y = Math.random()*window.innerHeight
-    this.elem.style.transform = `rotate(${Math.random()*360}deg)`
-    this.elem.style.top = y+"px"
-    this.elem.style.left = x+"px"
-    console.log(this.elem.style.top)
-  }
-  this.pass = function(num){
-    num = num ? num : 10
-    var self = this
-    for(var i=1;i<num;i++){
-      var x = (function(n){
-        return function(){
-          setTimeout(
-            function(){
-              self.move()
-         },1000*n
-        )
+      this.elem = document.createElement("img")
+      document.body.appendChild(this.elem)
+      this.elem.src = "http://animations.shoppinng.ru/wp-content/uploads/2014/02/51.gif"
+      this.elem.style = `
+      position:fixed;
+      display:block;
+      transition:all 0.5s;
+      width:200px;
+      `
+      this.move = function(){
+        var x = Math.random()*window.innerWidth
+        var y = Math.random()*window.innerHeight
+        this.elem.style.transform = `rotate(${Math.random()*360}deg)`
+        this.elem.style.top = y+"px"
+        this.elem.style.left = x+"px"
+        console.log(this.elem.style.top)
       }
-      })(i)
-      x()
-    }
-  }
+      this.pass = function(num){
+        num = num ? num : 10
+        var self = this
+        for(var i=1;i<num;i++){
+          var x = (function(n){
+            return function(){
+              setTimeout(
+                function(){
+                  self.move()
+            },1000*n
+            )
+          }
+          })(i)
+          x()
+        }
+      }
 
-}
+    }
 var star =[]
 star.push(new Stars())
 star[0].pass(10)

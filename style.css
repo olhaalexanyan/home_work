@@ -10,7 +10,7 @@ body {
     position: fixed
     width: 400px;
     height: 400px;
-    background-image:url( http://beloweb.ru/wp-content/uploads/2014/05/1234567110.jpg);
+    background-image:url( http://beloweb.ru/wp-content/uploads/2014/05/1234567102.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -21,7 +21,7 @@ body {
 }
 .catDiv {
    position: fixed
-    width: 400px;
+   width: 400px;
     height: 400px;
     background-image:url( http://beloweb.ru/wp-content/uploads/2014/05/1234567102.jpg);
     background-size:cover;
@@ -33,6 +33,7 @@ body {
     float: center;
 }
 .dog {
+  position:absolute;
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -52,12 +53,13 @@ body {
   box-shadow: 0 8px 15px rgba(233, 58, 58, 0.74);
   transition: .3s;
 }
-.cat.active {
+.dog.active {
   top: .1em;
   left: .1em;
   box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
 }
 .cat {
+  position:absolute;
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -83,26 +85,95 @@ body {
   box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
 }
 .groupZvery {
-  {
-  text-decoration: none;
-  outline: none;
-  display: inline-block;
-  margin: 10px 20px;
-  padding: 15px 30px;
-  overflow: hidden;
-  border: 2px solid;
-  border-bottom-width: 4px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: rgba(30,255,188,1);
-  background: rgba(255,255,255,1);
-  transition: color .3s, background .5s;
+   color: #777;
+   padding: 10px;
+   font-size: 16px;
+   width: 50%;
+   background: #fff url(../images/select-arrow-open.png) 98% center no-repeat;
+   display: block;
+   border: 1px solid #ccc;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+   -o-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+   font-size: 30px;
+   font-style: italic;
 }
-groupZvery:hover {
-  animation: stripes .75s infinite linear;
-  background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
-  background-size: 10px 10px;
-  color: #FF50E5;
+
+.groupZvery:hover {
+   color: #777;
+   background: #f5f5f5 url(../images/select-arrow-open.png) 98% center no-repeat;
+}
+
+.activegroupZvery {
+   color: #777;
+   padding: 10px;
+   font-size: 16px;
+   width: 50%;
+   background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat;
+   display: block;
+   border: 1px solid #ccc;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.activegroupZvery:hover {
+   background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat;
+   color: #777;
+}
+
+.activegroupZvery:active {
+   background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat;
+   color: #777;
+}
+.picture {
+  position: absolute;
+  left:250px;
+}
+.picture2 {
+  position: absolute;
+  left:250px;
+}
+.catTextDiv {
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    background-color: rgb(7, 207, 114);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5px 10px 5px 30px;
+    padding-right: 0px;
+    border: solid 1px black;
+    float: center;
+    left:inherit;
+    bottom: inherit;
+    right: 50px;
+    line-height: 10px;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.dogTextDiv {
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    background-color: rgb(7, 207, 114);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5px 10px 5px 30px;
+    padding-right: 0px;
+    border: solid 1px black;
+    float: center;
+    left:inherit;
+    bottom: inherit;
+    right: 50px;
+    line-height: 10px;
+    font-size: 50px;
+    font-style: italic;
 }
